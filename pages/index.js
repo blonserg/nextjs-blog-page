@@ -1,6 +1,7 @@
 //import { createClient } from "contentful";
 import Head from "next/head";
 import BlogCard from "../components/BlogCard";
+import { motion } from "framer-motion";
 
 export async function getStaticProps() {
   // const client = createClient({
@@ -30,10 +31,13 @@ const Blog = ({ blogs }) => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                <div className="page-intro mar-top-lg">
+                <motion.div 
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="page-intro mar-top-lg">
                   <h1 className="page-title">What You Got Going Big?</h1>
                   <p>Sharing super ideas in simple, minimal & elegant way.</p>
-                </div>
+                </motion.div>
               </div>
             </div>
             <div className="articles-list mar-top-lg">
