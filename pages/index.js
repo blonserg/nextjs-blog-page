@@ -1,18 +1,18 @@
-import { createClient } from "contentful";
+//import { createClient } from "contentful";
 import Head from "next/head";
 import BlogCard from "../components/BlogCard";
 
 export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
+  // const client = createClient({
+  //   space: process.env.CONTENTFUL_SPACE_ID,
+  //   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  // });
 
-  const res = await client.getEntries({ content_type: "blog" });
+  // const res = await client.getEntries({ content_type: "blog" });
 
   return {
     props: {
-      blogs: res.items,
+      //blogs: res.items,
     },
     revalidate: 1,
   };
@@ -27,20 +27,20 @@ const Blog = ({ blogs }) => {
 
       <main id="journal">
         <div className="spacer">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                 <div className="page-intro mar-top-lg">
-                  <h1 className="page-title">Blog</h1>
+                  <h1 className="page-title">What You Got Going Big?</h1>
                   <p>Sharing super ideas in simple, minimal & elegant way.</p>
                 </div>
               </div>
             </div>
             <div className="articles-list mar-top-lg">
               <div className="grids">
-                {blogs.map((blog) => (
+                {/* {blogs.map((blog) => (
                   <BlogCard key={blog.sys.id} blog={blog} />
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
