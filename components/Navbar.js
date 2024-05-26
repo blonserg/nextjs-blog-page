@@ -2,12 +2,12 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header>
+    <header className="bg-dark">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
             <a className="logo" href="/"></a>
-            <nav>
+            <nav className="bg-dark">
               <ul>
                 <li>
                   <Link href="/">
