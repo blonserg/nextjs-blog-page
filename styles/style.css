@@ -128,6 +128,14 @@ blockquote::before {
   top: -10px;
 }
 
+.bg-light {
+  background-color: white;
+}
+
+.bg-dark {
+  background-color: #000;
+}
+
 blockquote::after {
   content: "";
 }
@@ -1427,6 +1435,36 @@ article.single .next-article a:hover {
   grid-template-columns: 1fr;
   grid-gap: 32px;
   margin-top: 32px;
+}
+
+.large-link {
+  border-bottom: 2px solid white;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: center;
+  font-size: 1.3em;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+}
+
+.link-text-block {
+  letter-spacing: 1px;
+  display: inline;
+  font-size: 20px;
+}
+
+.link-arrow-wrapper {
+  align-items: center;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+.link-arrow {
+  width: 18px;
+  padding-bottom: 2px;
+  font-size: 1.5em;
+  display: inline;
 }
 
 /* Portrait and Landscape */
