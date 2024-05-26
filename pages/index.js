@@ -79,16 +79,40 @@ const Blog = ({ blogs }) => {
             </div> */}
           </div>
         </div>
-        <div className="bg-light py-5">
+        <div className="bg-light py-12">
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-                <h2 className="text-dark">
-                  "Our mission is church for city"
+                <h2 className="font-bold text-center ">
+                  <p className="text-7xl bg-black d-inline mt-8 px-4">Our mission is</p>
+                  <p className="d-block my-6"></p>
+                  <p className="text-7xl bg-black d-inline mb-8 px-4">Church for city</p>
                 </h2>
               </div>
             </div>
           </div>
+        </div>
+        <div className="bg-dark py-12">
+          <div className="container-xl">
+            <div className="row">
+              <div className="col-lg-12">
+                <h2 className="text-7xl pb-4">Our Pastors</h2>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-6 text-white">
+                Photo
+              </div>
+              <div className="col-lg-6">
+                <p>
+                he vision for VOUS Church emerged out of the weekly gathering of The Rendezvous in Miami Gardens. The mission is to create a church in the heart of Miami that would be a home to all ages and represent the diversity of our beautiful city.
+
+                Our lead pastors, Rich and DawnCheré Wilkerson, have a heart to reach our city and beyond with the life-transforming message of Jesus. They believe in the next generation and value the wisdom and guidance of those that have gone before us.
+                </p>
+              </div>
+            </div>
+          </div>
+            
         </div>
       </main>
     </>
