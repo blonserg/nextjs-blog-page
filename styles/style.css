@@ -1365,6 +1365,31 @@ article.single .next-article a:hover {
     border-color: var(--clr-light-grey);
   }
 
+  .latest-vous-text-wrap {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px 20px;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
+
+  .react-multiple-carousel__arrow {
+    top: 0;
+  }
+
+  .react-multiple-carousel__arrow--left {
+    left: 1% !important;
+  }
+
+  .react-multiple-carousel__arrow--right {
+    left: 70px;
+    right: auto !important;
+  }
+
   footer {
     background-color: var(--clr-rich-black);
   }
