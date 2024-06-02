@@ -10,28 +10,8 @@ const Navbar = () => {
             <nav className="bg-dark">
               <ul>
                 <li>
-                  <Link href="/">
-                    <a>About</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a>Services</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a>Work</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a>Blog</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/">
-                    <a>Contact</a>
+                  <Link href="/crew">
+                    <a>Crew</a>
                   </Link>
                 </li>
               </ul>

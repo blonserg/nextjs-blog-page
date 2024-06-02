@@ -246,6 +246,33 @@ const Blog = ({ blogs }) => {
             </div>
           </Carousel>
         </div>
+        <div className="spacer bg-black">
+          <div className="container-xl">
+            <div className="row">
+              <div className="col-lg-12">
+                <h2 class="text-8xl pb-4 py-12">
+                  Ways we give
+                </h2>
+                <p>
+                  Generosity is our privilege because Jesus was first 
+                </p>
+                <Link href="/">
+                  <div className="d-flex align-middle">
+                    <motion.div 
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="large-link">
+                      <p className="link-text-block m-0">Learn More</p>
+                      <div className="link-arrow-wrapper">
+                        <img src="https://assets-global.website-files.com/5f0cd5fb99f5470b194d3979/5fa7f3b53a458fb6d5885efa_arrowwhite.svg" loading="lazy" width="32" alt="" class="link-arrow" />
+                      </div>
+                    </motion.div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
