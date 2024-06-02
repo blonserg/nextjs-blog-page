@@ -1,7 +1,43 @@
-//import { createClient } from "contentful";
 import Head from "next/head";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+
+function CustomTabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
 export async function getStaticProps() {
   return {
@@ -12,6 +48,12 @@ export async function getStaticProps() {
 }
 
 const Crew = () => {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <>
       <Head>
@@ -32,30 +74,29 @@ const Crew = () => {
           </div>
         </div>
         <div className="bg-white py-12">
-          <div className="container-fluid">
+          <div className="container-xl">
             <div className="row">
-              <div className="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
-                <h2 className="font-bold text-center ">
-                  <p className="text-7xl bg-black d-inline mt-8 px-4">Our mission is</p>
-                  <p className="d-block my-6"></p>
-                  <p className="text-7xl bg-black d-inline mb-8 px-4">Church for city</p>
-                </h2>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-</div>
+              <div className="col-lg-12 pb-10">
+                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                  <Tab label="Crews" {...a11yProps(0)} />
+                  <Tab label="Lead Crews" {...a11yProps(1)} />
+                </Tabs>
+                <CustomTabPanel value={value} index={0}>
+                  <h2 className="text-8xl text-black">
+                    What Crew
+                  </h2>
+                  <p className="text-black">
+                  Crews are where we pray for each other and support each other. These gatherings take place every other week. A Crew turns a crowd into a community!
+                  </p>
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={1}>
+                <h2 className="text-8xl text-black">
+                    Lead Crew
+                  </h2>
+                  <p className="text-black">
+                  Crews are where we pray for each other and support each other. These gatherings take place every other week. A Crew turns a crowd into a community!
+                  </p>
+                </CustomTabPanel>
               </div>
             </div>
           </div>

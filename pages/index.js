@@ -35,13 +35,11 @@ const Blog = ({ blogs }) => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                <motion.div 
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                <div 
                   className="page-intro mar-top-lg">
                   <h1 className="page-title">What You Got Going Big?</h1>
                   <p>Sharing super ideas in simple, minimal & elegant way.</p>
-                </motion.div>
+                </div>
               </div>
             </div>
             <div className="row">
@@ -57,7 +55,7 @@ const Blog = ({ blogs }) => {
                 <p className="mt-0">
                   Join us every Sunday
                 </p>
-                <Link href="/">
+                <Link  href="/">
                   <div className="d-flex align-middle">
                     <motion.div 
                       whileHover={{ scale: 1.1 }}

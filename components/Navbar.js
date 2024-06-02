@@ -6,12 +6,12 @@ const Navbar = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <a className="logo" href="/"></a>
+            <Link className="logo" href="/"></Link>
             <nav className="bg-dark">
               <ul>
                 <li>
                   <Link href="/crew">
-                    <a>Crew</a>
+                    Crew
                   </Link>
                 </li>
               </ul>
