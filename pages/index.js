@@ -23,6 +23,20 @@ export async function getStaticProps() {
   };
 }
 
+const cardVariants = {
+  offscreen: {
+    y: 300
+  },
+  onscreen: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8
+    }
+  }
+};
+
 const Blog = ({ blogs }) => {
   return (
     <>
@@ -71,45 +85,62 @@ const Blog = ({ blogs }) => {
 
               </div>
             </div>
-            {/* <div className="articles-list mar-top-lg">
-              <div className="grids">
-                {blogs.map((blog) => (
-                  <BlogCard key={blog.sys.id} blog={blog} />
-                ))}
-              </div>
-            </div> */}
           </div>
         </div>
         <div className="bg-light py-12">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
+              <motion.div 
+                className="col-lg-6 offset-lg-3 col-md-10 offset-md-1"
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={cardVariants}
+                viewport={{ once: true, amount: 0.8 }}
+                >
                 <h2 className="font-bold text-center ">
                   <p className="text-7xl bg-black d-inline mt-8 px-4">Our mission is</p>
                   <p className="d-block my-6"></p>
                   <p className="text-7xl bg-black d-inline mb-8 px-4">Church for city</p>
                 </h2>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
         <div className="bg-dark py-12">
           <div className="container-xl">
             <div className="row">
-              <div className="col-lg-12">
+              <motion.div 
+                className="col-lg-12"
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={cardVariants}
+                viewport={{ once: true, amount: 0.8 }}
+              >
                 <h2 className="text-7xl pb-4">Our Pastors</h2>
-              </div>
+              </motion.div>
             </div>
             <div className="row">
-              <div className="col-lg-6 text-white">
+              <motion.div 
+                className="col-lg-6 text-white"
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={cardVariants}
+                viewport={{ once: true, amount: 0 }}
+              >
               <Image
                 src="/img/pastor.jpg"
                 alt="My Image"
                 width={500}
                 height={500}
               />
-              </div>
-              <div className="col-lg-6">
+              </motion.div>
+              <motion.div 
+                className="col-lg-6"
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={cardVariants}
+                viewport={{ once: true, amount: 0 }}
+              >
                 <p className="d-block">
                 Our church family is a beacon of hope in our community.  We are a place where people can find solace, connection, and spiritual growth.  But a church shouldn't be stagnant.  It should be a vibrant, ever-evolving organism, guided by a clear vision from God.
                 </p>
@@ -121,7 +152,7 @@ const Blog = ({ blogs }) => {
                 <p className="d-block mt-4">
                 This vision is not mine alone.  It is a vision that I believe God has placed on all of our hearts.  Together, through prayer, dedication, and commitment, we can turn this vision into reality.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
             
@@ -247,7 +278,13 @@ const Blog = ({ blogs }) => {
         <div className="spacer bg-black">
           <div className="container-xl">
             <div className="row">
-              <div className="col-lg-12">
+              <motion.div 
+                initial="offscreen"
+                whileInView="onscreen"
+                variants={cardVariants}
+                viewport={{ once: true, amount: 0 }}
+                className="col-lg-12"
+                >
                 <h2 class="text-8xl pb-4 py-12">
                   Ways we give
                 </h2>
@@ -267,7 +304,7 @@ const Blog = ({ blogs }) => {
                     </motion.div>
                   </div>
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
