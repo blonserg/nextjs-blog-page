@@ -6,24 +6,24 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Skeleton from "../components/Skeleton";
 
-const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-});
+// const client = createClient({
+//   space: process.env.CONTENTFUL_SPACE_ID,
+//   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+// });
 
 export const getStaticPaths = async () => {
-  const res = await client.getEntries({
-    content_type: "blog",
-  });
+  // const res = await client.getEntries({
+  //   content_type: "blog",
+  // });
 
-  const paths = res.items.map((item) => {
-    return {
-      params: { slug: item.fields.slug },
-    };
-  });
+  // const paths = res.items.map((item) => {
+  //   return {
+  //     params: { slug: item.fields.slug },
+  //   };
+  // });
 
   return {
-    paths,
+    paths : [],
     fallback: true,
   };
 };
