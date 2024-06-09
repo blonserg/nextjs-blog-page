@@ -1382,13 +1382,24 @@ article.single .next-article a:hover {
   }
 
   .react-multiple-carousel__arrow--left {
-    left: 1% !important;
+    left: 5rem !important;
   }
 
   .react-multiple-carousel__arrow--right {
-    left: 70px;
+    left: calc(5rem + 50px);
     right: auto !important;
   }
+
+  .value-wrapper {
+    border-top: 8px solid black;
+    flex-direction: column;
+    flex: none;
+    align-self: stretch;
+    max-width: 375px;
+    margin-right: 20px;
+    display: flex;
+    overflow: visible;
+}
 
   footer {
     background-color: var(--clr-rich-black);

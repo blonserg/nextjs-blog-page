@@ -275,8 +275,8 @@ const Blog = ({ blogs }) => {
             </div>
           </Carousel>
         </div>
-        <div className="spacer bg-black">
-          <div className="container-xl">
+        <div className="spacer bg-black pb-6">
+          <div className="container-xl pb-8">
             <div className="row">
               <motion.div 
                 initial="offscreen"
@@ -292,7 +292,7 @@ const Blog = ({ blogs }) => {
                   Generosity is our privilege because Jesus was first 
                 </p>
                 <Link href="/">
-                  <div className="d-flex align-middle">
+                  <div className="d-flex align-middle pb-8">
                     <motion.div 
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
@@ -307,6 +307,126 @@ const Blog = ({ blogs }) => {
               </motion.div>
             </div>
           </div>
+        </div>
+        <div className="bg-white py-12">
+          <div className="spacer">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-lg-12">
+                  <h2 className="text-8xl pb-4 text-black">Our Values</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Carousel
+            additionalTransfrom={0}
+            arrows
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className="pt-12"
+            containerClass="container"
+            dotListClass=""
+            draggable
+            focusOnSelect={false}
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            partialVisible
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024
+                },
+                items: 3,
+                partialVisibilityGutter: 40
+              },
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0
+                },
+                items: 1,
+                partialVisibilityGutter: 30
+              },
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 464
+                },
+                items: 2,
+                partialVisibilityGutter: 30
+              }
+            }}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            <div>
+              <div class="value-wrapper white">
+                <div class="value-header d-flex ">
+                  <h3 class="value-heading-3 text-8xl text-black mr-2">01<br /></h3>
+                  <h4 class="text-4xl text-black mt-3">Sacrificial  &nbsp;▽ &nbsp;relationship  <br />with God<br /></h4>
+                </div>
+                <div class="value-body">
+                  <p class="p-value text-black mt-3">This concept implies that we give God the most precious thing we have, out of love and gratitude for His love and grace.<br/></p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="value-wrapper white">
+                <div class="value-header d-flex ">
+                  <h3 class="value-heading-3 text-8xl text-black mr-2">02<br /></h3>
+                  <h4 class="text-4xl text-black mt-3">Worship<br /></h4>
+                </div>
+                <div class="value-body">
+                  <p class="p-value text-black mt-3">Worship is the expression of love, respect, and gratitude to God. It can happen both individually and within a community.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="value-wrapper white">
+                <div class="value-header d-flex ">
+                  <h3 class="value-heading-3 text-8xl text-black mr-2">03<br /></h3>
+                  <h4 class="text-4xl text-black mt-3">Giving  &nbsp;▽ &nbsp;<br /></h4>
+                </div>
+                <div class="value-body">
+                  <p class="p-value text-black mt-3">Giving is the voluntary surrender of our time, resources, and talents to God. It's not just about donating money, but also about being willing to share what is valuable to us.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="value-wrapper white">
+                <div class="value-header d-flex ">
+                  <h3 class="value-heading-3 text-8xl text-black mr-2">04<br /></h3>
+                  <h4 class="text-4xl text-black mt-3">Honoring &nbsp;▽ &nbsp;others<br /></h4>
+                </div>
+                <div class="value-body">
+                  <p class="p-value text-black mt-3">Honoring others is acknowledging their worth and dignity as God's creations. It means treating them with respect, kindness, and compassion, even if they are different from us.<br/></p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="value-wrapper white">
+                <div class="value-header d-flex ">
+                  <h3 class="value-heading-3 text-8xl text-black mr-2">05<br /></h3>
+                  <h4 class="text-4xl text-black mt-3">I am a blessing<br /></h4>
+                </div>
+                <div class="value-body">
+                  <p class="p-value text-black mt-3">We can do this by using our gifts, talents, and resources to help others, make the world a better place, and glorify God.<br/></p>
+                </div>
+              </div>
+            </div>
+          </Carousel>
         </div>
       </main>
     </>
