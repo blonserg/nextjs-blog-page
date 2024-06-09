@@ -1,6 +1,5 @@
 //import { createClient } from "contentful";
 import Head from "next/head";
-import BlogCard from "../components/BlogCard";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from 'next/image';
@@ -50,15 +49,17 @@ const Blog = ({ blogs }) => {
             <div className="row">
               <div className="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                 <div 
-                  className="page-intro mar-top-lg">
-                  <h1 className="page-title">What You Got Going Big?</h1>
+                  className="page-intro mb-6">
+                  <h1 className="page-title">What You Got?</h1>
                   <p>Sharing super ideas in simple, minimal & elegant way.</p>
                 </div>
               </div>
             </div>
             <div className="row">
               <div className="col-lg-12">
-                  <iframe width="100%" height="715" src="https://www.youtube.com/embed/lQcCKYkC6LM?si=d7v3DNCmE6w8_VPD&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <video autoPlay loop muted>
+                  <source src="https://storage.googleapis.com/vous-church-website/CDN/sermon_loops/2024/June/06.02%20web%20loop.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
             <div className="row">
